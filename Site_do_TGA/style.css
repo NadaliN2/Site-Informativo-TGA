@@ -1,0 +1,639 @@
+/* SELETORES DE TAG */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f1117;
+    color: #e6e8ee;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+blockquote {
+    border-left: 4px solid #d4af37;
+    padding-left: 16px;
+    font-style: italic;
+    margin: 18px 0;
+    color: #c8c8c8;
+}
+
+caption {
+    caption-side: top;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #d4af37;
+    text-align: center;
+}
+
+legend {
+    font-weight: bold;
+    color: #d4af37;
+    padding: 0 8px;
+}
+
+a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* SELETORES AGRUPADOS */
+h1, h2, h3, h4 {
+    color: #f5d061;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #353b4d;
+    background-color: #181c26;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* SELETORES DE ID */
+#bruno_pietro_cabecalho {
+    background-color: #161923;
+    border-bottom: 2px solid #d4af37;
+    padding: 20px 0 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px 16px 20px;
+}
+
+#container {
+    max-width: 1240px;
+    margin: 28px auto;
+    padding: 0 20px;
+}
+
+#bruno_pietro_rodape {
+    background-color: #161923;
+    border-top: 2px solid #d4af37;
+    text-align: center;
+    padding: 28px 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #b0b5c4;
+}
+
+/* SELETORES ENCADEADOS */
+#pietro_menu_principal ul.bruno_lista_nav {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    background-color: #0b0d12;
+    padding: 10px 20px;
+}
+
+#pietro_menu_principal ul.bruno_lista_nav li a {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #e6e8ee;
+}
+
+#pietro_menu_principal ul.bruno_lista_nav li a:hover {
+    background-color: #d4af37;
+    color: #0f1117;
+    text-decoration: none;
+}
+
+.bruno_secao p.bruno_voltar_topo {
+    text-align: right;
+    margin-top: 18px;
+    font-size: 0.88rem;
+    font-weight: bold;
+}
+
+/* SELETORES DE CLASSE */
+.bruno_topo_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.bruno_logo {
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    color: #ffffff;
+}
+
+.pietro_subtitulo {
+    font-size: 0.92rem;
+    color: #a8afc2;
+}
+
+.bruno_botao_acao {
+    background-color: #d4af37;
+    color: #0f1117;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* BANNER */
+.bruno_banner_destaque {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid #2e3446;
+    background-color: #161923;
+}
+
+.pietro_img_banner {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.bruno_banner_texto {
+    padding: 22px;
+}
+
+.bruno_selo_dourado {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #242a3d;
+    color: #f5d061;
+    border: 1px solid #d4af37;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.88rem;
+}
+
+.bruno_rodape_referencias {
+    max-width: 800px;
+    margin: 0 auto 14px auto;
+}
+
+.pietro_lista_rodape {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.pietro_lista_rodape li a {
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   CSS GRID C
+   ========================================================================== */
+.pietro_layout_grid_c {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "historia ficha";
+    gap: 24px;
+    align-items: start;
+}
+
+.pietro_artigo_historia {
+    grid-area: historia;
+}
+
+.pietro_barra_lateral {
+    grid-area: ficha;
+    background-color: #1e2331;
+    border: 1px solid #32394f;
+    border-left: 4px solid #d4af37;
+    border-radius: 8px;
+    padding: 18px;
+}
+
+/* ==========================================================================
+   SEÇÕES DE CONTEÚDO
+   ========================================================================== */
+.bruno_secao {
+    background-color: #161923;
+    border: 1px solid #272c3d;
+    border-radius: 10px;
+    padding: 26px;
+    margin-bottom: 28px;
+}
+
+.bruno_secao p {
+    margin-bottom: 12px;
+}
+
+.bruno_lista_padrao {
+    padding-left: 22px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.bruno_lista_padrao li {
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   ABAS INTERATIVAS + CADASTRO DINÂMICO
+   ========================================================================== */
+.bruno_abas_nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.pietro_aba_btn {
+    background-color: #222736;
+    color: #e6e8ee;
+    border: 1px solid #383f54;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.pietro_aba_btn.pietro_aba_ativa {
+    background-color: #d4af37;
+    color: #0f1117;
+    border-color: #d4af37;
+}
+
+.bruno_aba_painel {
+    display: none;
+    background-color: #1d2230;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #32384c;
+    border-left: 4px solid #d4af37;
+}
+
+.bruno_aba_painel.bruno_aba_visivel {
+    display: block;
+}
+
+.bruno_aviso_dinamico {
+    margin-top: 18px;
+    padding: 16px;
+    background-color: #161923;
+    border: 1px dashed #383f54;
+    border-radius: 8px;
+}
+
+.pietro_linha_dinamica {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.pietro_linha_dinamica input {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* ==========================================================================
+   TABELA 10x6
+   ========================================================================== */
+.pietro_tabela_scroll {
+    overflow-x: auto;
+}
+
+.bruno_tabela {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.bruno_tabela th,
+.bruno_tabela td {
+    border: 1px solid #32384c;
+    padding: 12px 10px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.bruno_tabela thead th {
+    background-color: #d4af37;
+    color: #0f1117;
+    font-weight: bold;
+}
+
+.bruno_tabela tbody tr:nth-child(even) {
+    background-color: #1c202e;
+}
+
+.bruno_tabela tbody tr:hover {
+    background-color: #242a3d;
+}
+
+/* ==========================================================================
+   CARROSSEL COM UPLOAD LOCAL
+   ========================================================================== */
+.pietro_carrossel_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background-color: #1d2230;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #32384c;
+}
+
+.bruno_carrossel_visor {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+}
+
+.bruno_carrossel_visor img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #d4af37;
+    display: block;
+}
+
+.pietro_legenda_slide {
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+    font-weight: 600;
+}
+
+.pietro_btn_seta {
+    background-color: #222736;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    font-size: 1.5rem;
+    padding: 8px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pietro_btn_seta:hover {
+    background-color: #d4af37;
+    color: #0f1117;
+}
+
+.bruno_contador_texto {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.pietro_form_carrossel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   GALERIA DE 4 CARDS
+   ========================================================================== */
+.bruno_galeria_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
+}
+
+.pietro_card_galeria {
+    background-color: #1e2332;
+    border: 1px solid #32394f;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pietro_card_galeria img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.bruno_card_texto {
+    padding: 14px;
+}
+
+/* ==========================================================================
+   FORMULÁRIO
+   ========================================================================== */
+.bruno_fieldset {
+    border: 1px solid #353c52;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.pietro_campo_grupo {
+    margin-bottom: 16px;
+}
+
+.pietro_campo_grupo label,
+.pietro_campo_grupo span {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.bruno_radio_linha {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bruno_radio_linha label,
+.pietro_check_linha {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.bruno_radio_linha input[type="radio"],
+.pietro_campo_grupo input[type="checkbox"] {
+    width: auto;
+}
+
+.bruno_acoes_form {
+    display: flex;
+    gap: 12px;
+}
+
+#bruno_btn_limpar {
+    background-color: #2b3142;
+    color: #e6e8ee;
+    border: 1px solid #3d455c;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   MODO CLARO GLOBAL
+   ========================================================================== */
+body.bruno_modo_claro {
+    background-color: #f3f4f8;
+    color: #1b1e28;
+}
+
+body.bruno_modo_claro #bruno_pietro_cabecalho,
+body.bruno_modo_claro .bruno_secao,
+body.bruno_modo_claro #bruno_pietro_rodape,
+body.bruno_modo_claro .bruno_banner_destaque,
+body.bruno_modo_claro .pietro_area_lateral {
+    background-color: #ffffff;
+    border-color: #cfd4e2;
+    color: #1b1e28;
+}
+
+body.bruno_modo_claro #pietro_menu_principal ul.bruno_lista_nav {
+    background-color: #e6e9f2;
+}
+
+body.bruno_modo_claro #pietro_menu_principal ul.bruno_lista_nav li a {
+    color: #1b1e28;
+}
+
+body.bruno_modo_claro #pietro_menu_principal ul.bruno_lista_nav li a:hover {
+    background-color: #8a6908;
+    color: #ffffff;
+}
+
+body.bruno_modo_claro .bruno_logo,
+body.bruno_modo_claro h1,
+body.bruno_modo_claro h2,
+body.bruno_modo_claro h3,
+body.bruno_modo_claro h4,
+body.bruno_modo_claro caption,
+body.bruno_modo_claro legend {
+    color: #8a6908;
+}
+
+body.bruno_modo_claro .pietro_subtitulo {
+    color: #4f566b;
+}
+
+body.bruno_modo_claro .bruno_selo_dourado {
+    background-color: #fdf6df;
+    color: #8a6908;
+    border-color: #8a6908;
+}
+
+body.bruno_modo_claro .pietro_aba_btn {
+    background-color: #e6e9f2;
+    color: #1b1e28;
+    border-color: #c5ccde;
+}
+
+body.bruno_modo_claro .pietro_aba_btn.pietro_aba_ativa {
+    background-color: #8a6908;
+    color: #ffffff;
+    border-color: #8a6908;
+}
+
+body.bruno_modo_claro .bruno_aba_painel,
+body.bruno_modo_claro .bruno_aviso_dinamico,
+body.bruno_modo_claro .pietro_carrossel_box,
+body.bruno_modo_claro .bruno_card_grid,
+body.bruno_modo_claro .pietro_card_grid,
+body.bruno_modo_claro .pietro_card_galeria {
+    background-color: #eef1f7;
+    color: #1b1e28;
+    border-color: #c5ccde;
+}
+
+body.bruno_modo_claro .pietro_card_grid.pietro_card_central {
+    background-color: #fbf5e1;
+    border-color: #8a6908;
+}
+
+body.bruno_modo_claro input[type="text"],
+body.bruno_modo_claro input[type="email"],
+body.bruno_modo_claro input[type="number"],
+body.bruno_modo_claro select,
+body.bruno_modo_claro textarea {
+    background-color: #ffffff;
+    color: #1b1e28;
+    border-color: #aeb6cc;
+}
+
+body.bruno_modo_claro .bruno_tabela tbody tr:nth-child(even) {
+    background-color: #eef1f7;
+}
+
+body.bruno_modo_claro blockquote {
+    color: #3a4052;
+}
+
+body.bruno_modo_claro a {
+    color: #8a6908;
+}
+
+body.bruno_modo_claro .pietro_barra_lateral {
+    background-color: #eef1f7;
+    border-color: #c5ccde;
+    border-left: 4px solid #8a6908;
+    color: #1b1e28;
+}
+
+/* ==========================================================================
+   MEDIA QUERY — ADAPTAÇÃO DE GRADES EM LARGURA REDUZIDA
+   ========================================================================== */
+@media (max-width: 900px) {
+    .pietro_layout_grid_c {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "historia"
+            "ficha";
+    }
+
+    .pietro_grid_a,
+    .bruno_grid_b {
+        grid-template-columns: 1fr;
+    }
+
+    .bruno_carrossel_visor img {
+        height: 240px;
+    }
+}
